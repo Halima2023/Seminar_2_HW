@@ -20,7 +20,7 @@ void ShowArray(int[] array)
     Console.WriteLine();
 }
 
-int GetSumOfNegatives(int[] array)
+int GetSumOfOddes(int[] array)
 {
     int odd = 0;
     for (int i = 1; i < array.Length; i = i + 2)
@@ -39,4 +39,4 @@ int max = Convert.ToInt32(Console.ReadLine());
 int[] myArray = CreateRandomArray(size, min, max);
 ShowArray(myArray);
 
-Console.Write("Sum of odd indeks is " + GetSumOfNegatives(myArray));
+Console.Write("Sum of odd indeks is " + GetSumOfOddes(myArray));

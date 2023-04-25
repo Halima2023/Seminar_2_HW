@@ -27,6 +27,7 @@ double GetDiffOfNumbers(int size, double min, double max)
    
     for (int i = 0; i < size; i++)
     {
+        diff = max - min;
         if (num[i] > max) max = num[i];
 
         else if (num[i] < min) min = num[i];
