@@ -57,7 +57,7 @@ Console.Write($" Количество четных элементов в мас�
 // Напишите программу, которая покажет количество чётных чисел в массиве.[345, 897, 568, 234] -> 2
 
 
-int[] CreateRandomArray(int size, int minValue, int maxValue)
+int[] CreateRandomArray(int size)
 {
     int[] array = new int[size];
 
@@ -73,7 +73,7 @@ void ShowArray(int[] array)
 
     Console.Write($"New array: [{array[0]}");
 
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 1; i < array.Length; i++)
 
         Console.Write($" {array[i]}"); 
         Console.Write("]");
@@ -93,11 +93,8 @@ int QuantityOfEven(int[] array)
 
 Console.Write("Input a quantity of elements: ");
 int size = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input a minimum possible element: ");
-int min = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input a maximum possible element: ");
-int max = Convert.ToInt32(Console.ReadLine());
-int[] myArray = CreateRandomArray(size, min, max);
+
+int[] myArray = CreateRandomArray(size);
 ShowArray(myArray);
 QuantityOfEven(myArray);
 int res = QuantityOfEven(myArray);
