@@ -14,17 +14,18 @@ int[] CreateRandomArray(int size, int minValue, int maxValue)
 
 void ShowArray(int[] array)
 {
-    for (int i = 0; i < array.Length; i++)
-        Console.Write(array[i] + " ");
+    Console.Write($"New array: [{array[0]}");
 
-    Console.WriteLine();
+    for (int i = 1; i < array.Length; i++)
+
+        Console.Write($" {array[i]}");
+    Console.Write("]");
 }
 
 int GetSumOfOddesDig(int[] array)
 {
     int odd = 0;
     for (int i = 1; i < array.Length; i = i + 2)
-
         odd += array[i];
     return odd;
 }
@@ -38,5 +39,5 @@ int max = Convert.ToInt32(Console.ReadLine());
 
 int[] myArray = CreateRandomArray(size, min, max);
 ShowArray(myArray);
-
-Console.Write("Sum of odd indeks is " + GetSumOfOddesDig(myArray));
+int odd = GetSumOfOddesDig(myArray);
+Console.Write($" Sum of odd indeks -> {odd} ");

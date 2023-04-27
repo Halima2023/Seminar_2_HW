@@ -15,7 +15,7 @@ void ShowArray(double[] array)
 {
     Console.Write("[");
     for (int i = 0; i < array.Length; i++)
-        Console.Write(array[i]+"");
+        Console.Write(array[i] + " ");
 
     Console.WriteLine("]");
 }
@@ -34,6 +34,7 @@ double GetDiffOfNumbers(int size, double min, double max)
     }
     return diff;
 }
+
 Console.Write("Input a quantity of elements: ");
 int size = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input a minimum possible element: ");
@@ -43,6 +44,6 @@ double max = Convert.ToDouble(Console.ReadLine());
 double[] array = CreateRandomArray(size, min, max);
 ShowArray(array);
 
-
+int diff = GetDiffOfNumbers(array);
 Console.WriteLine($"Разница между максимальным и минимальным числами: {max - min}");
 
