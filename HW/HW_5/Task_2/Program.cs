@@ -41,3 +41,4 @@ int[] myArray = CreateRandomArray(size, min, max);
 ShowArray(myArray);
 int odd = GetSumOfOddesDig(myArray);
 Console.Write($" Sum of odd indeks -> {odd} ");
+
