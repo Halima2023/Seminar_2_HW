@@ -10,33 +10,45 @@
 
 int[,] GreateRandom2dArray(int rows, int columns)
 {
-    int[,] array = new int[rows, columns];
-   
+    int[,] arr = new int[rows, columns];
+
     for (int i = 0; i < rows; i++)
         for (int j = 0; j < columns; j++)
-            array[i, j] = new Random().Next(rows, columns);
-       
-    return array;
+            arr[i, j] = new Random().Next(10);
+
+    return arr;
 }
 
-void Show2dArray(int[,] array)
+void Show2dArray(int[,] arr)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < arr.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)  
-           
-            Console.Write(array[i, j] + " ");
-           
+        for (int j = 0; j < arr.GetLength(1); j++)
+
+            Console.Write(arr[i, j] + " ");
+
         Console.WriteLine();
     }
     Console.WriteLine();
 }
 
+void SumColumns(int[,] arr)
+{
+    for (int j = 0; j < arr.GetLength(1); j++)
+    {
+        double sum = 0;
+        for (int i = 0; i < arr.GetLength(0); i++)
+        {
+            sum += arr[i, j];
+        }
+        Console.Write($"{sum / arr.GetLength(0)} ");
+    }
+}
 Console.Write("Input a quantity of rows: ");
 int rows = Convert.ToInt32(Console.ReadLine());
 Console.Write("Input a quantity of columns: ");
 int columns = Convert.ToInt32(Console.ReadLine());
-
-
-GreateRandom2dArray(rows, columns);
+int[,] arr = GreateRandom2dArray(rows, columns);
+Show2dArray(arr);
+SumColumns(arr);
 
